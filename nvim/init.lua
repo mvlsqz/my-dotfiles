@@ -46,6 +46,7 @@ key_mapper('i', 'jK', '<ESC>')
 key_mapper('v', 'jk', '<ESC>')
 key_mapper('v', 'JK', '<ESC>')
 key_mapper('v', 'jK', '<ESC>')
+key_mapper('n', '<SPACE>ft', ':NvimTreeToggle<CR>')
 
 local vim = vim
 
