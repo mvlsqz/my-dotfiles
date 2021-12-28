@@ -8,6 +8,18 @@ au({ 'TermOpen' }, {
     end,
 })
 
+au({'TermOpen'},
+    '*',
+    function()
+        vim.api.nvim_buf_set_keymap(
+            0,
+            'tnoremap',
+            '<Esc>',
+            '<c-\><c-n>'
+        )
+    end
+)
+
 au({'BufNewFile', 'BufRead'}, {
     '*.tf,*.tfvars.*,*.tfvars',
     function()
