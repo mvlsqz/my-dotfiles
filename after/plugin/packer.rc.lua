@@ -68,5 +68,4 @@ require('packer').startup(function()
       'nvim-telescope/telescope.nvim',
     }
   }
-
 end)
