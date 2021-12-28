@@ -1,3 +1,4 @@
+--- This helper is to load autocommands
 local cmd = vim.api.nvim_command
 
 local function autocmd(this, event, spec)
