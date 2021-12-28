@@ -147,6 +147,11 @@ lspconfig.tsserver.setup {
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
 }
 
+lspconfig.terraformls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
 lspconfig.yamlls.setup {
   on_attach = on_attach,
   capabilities = capabilities
