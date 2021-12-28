@@ -60,6 +60,13 @@ require('packer').startup(function()
   use {
     'nvim-telescope/telescope-fzf-native.nvim', run = 'make'
   }
+
+  -- Sessions
+  use {
+    'Shatur/neovim-session-manager',
+    requires = {
+      'nvim-telescope/telescope.nvim',
+    }
+  }
+
 end)
-
-
