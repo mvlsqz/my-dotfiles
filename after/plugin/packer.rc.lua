@@ -63,12 +63,5 @@ require('packer').startup(function()
     'nvim-telescope/telescope-fzf-native.nvim', run = 'make'
   }
 
-  use { 
-    'glepnir/dashboard-nvim',
-    requires = { 
-      {'junegunn/fzf.vim'},
-      {'liuchengxu/vim-clap', run = ':Clap install-binary!'}
-    }
-  }
-
+  use 'nvim-telescope/telescope-project.nvim'
 end)
