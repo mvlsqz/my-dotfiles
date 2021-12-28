@@ -154,7 +154,14 @@ lspconfig.terraformls.setup {
 
 lspconfig.yamlls.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
+  settings = {
+    yaml = {
+      schemas = {
+        ["/home/marvinv/Projects/k8s-schemas/v1.22.3-local/pod.json"] = "*-pod.yaml",
+      }
+    }
+  }
 }
 
 lspconfig.dockerls.setup{

@@ -57,6 +57,8 @@ require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use 'fhill2/telescope-ultisnips.nvim'
+
   use {
     'nvim-telescope/telescope-fzf-native.nvim', run = 'make'
   }
