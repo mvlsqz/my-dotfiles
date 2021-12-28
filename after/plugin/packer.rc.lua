@@ -64,4 +64,6 @@ require('packer').startup(function()
   }
 
   use 'nvim-telescope/telescope-project.nvim'
+  
+  use 'dhruvmanila/telescope-bookmarks.nvim'
 end)
