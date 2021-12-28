@@ -1,13 +1,13 @@
 local au = require('au')
 
-au({ 'TermOpen' }, {
+au({ 'TermOpen', 'TermEnter' }, {
     '*',
     function()
       vim.wo.relativenumber = false
       vim.wo.number = false
     end,
 })
-au({ 'TermClose' }, {
+au({ 'TermClose', 'TermLeave' }, {
     '*',
     function()
       vim.wo.relativenumber = true
