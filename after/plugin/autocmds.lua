@@ -7,19 +7,13 @@ au({ 'TermOpen' }, {
       vim.wo.number = false
     end,
 })
-
-au({'TermOpen'},
+au({ 'TermClose' }, {
     '*',
     function()
-        vim.api.nvim_buf_set_keymap(
-            0,
-            'tnoremap',
-            '<Esc>',
-            '<c-\><c-n>'
-        )
-    end
-)
-
+      vim.wo.relativenumber = true
+      vim.wo.number = true
+    end,
+})
 au({'BufNewFile', 'BufRead'}, {
     '*.tf,*.tfvars.*,*.tfvars',
     function()
