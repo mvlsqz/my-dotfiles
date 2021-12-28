@@ -1,2 +1,4 @@
 init.lua
 undodir/
+
+plugin/packer_compiled.lua
