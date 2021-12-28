@@ -16,6 +16,7 @@ require('packer').startup(function()
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
+  use 'L3MON4D3/LuaSnip'
   -- ultisnip FTW!
   use 'SirVer/ultisnips'
   use 'quangnguyen30192/cmp-nvim-ultisnips'
@@ -23,6 +24,7 @@ require('packer').startup(function()
   -- themes themes
   use 'tjdevries/colorbuddy.nvim'
   use 'bkegley/gloombuddy'
+  use 'norcalli/nvim-colorizer.lua'
 
   -- Ultisnips
   use 'andrewstuart/vim-kubernetes'
@@ -35,7 +37,29 @@ require('packer').startup(function()
 
   -- Lualine
   use 'hoob3rt/lualine.nvim'
+  use 'kdheepak/tabline.nvim'
 
   -- webdevicons
-  use 'kyazdani42/nvim-web-devicons'
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+    config = function() require'nvim-tree'.setup {} end
+  }
+
+  -- teminal
+  use 'akinsho/toggleterm.nvim'
+
+  -- Telescope
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim', run = 'make'
+  }
 end)
+
+

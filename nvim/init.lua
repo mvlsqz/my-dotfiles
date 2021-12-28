@@ -1,5 +1,5 @@
-vim.g.python_host_prog = '/home/marvinv/.conda/envs/nvim2/bin/python'
-vim.g.python3_host_prog = '/home/marvinv/.conda/envs/nvim3/bin/python'
+vim.g.python_host_prog = '/usr/local/Caskroom/miniconda/base/envs/neovim2/bin/python'
+vim.g.python3_host_prog = '/usr/local/Caskroom/miniconda/base/envs/neovim3/bin/python'
 vim.o.termguicolors = true
 vim.o.syntax = 'on'
 vim.o.errorbells = false
@@ -13,7 +13,6 @@ vim.o.incsearch = true
 vim.o.completeopt = 'menu,menuone,noselect'
 vim.bo.autoindent = true
 vim.bo.smartindent = true
-
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
@@ -25,10 +24,8 @@ vim.wo.wrap = false
 
 --- Mapping leader to space ---
 vim.g.mapleader = ' '
---- Default theme ---
-vim.g.colors_name = 'gloombuddy' 
 
-local key_mapper = function(mode, key, result)
+key_mapper = function(mode, key, result)
   vim.api.nvim_set_keymap(
     mode,
     key,
