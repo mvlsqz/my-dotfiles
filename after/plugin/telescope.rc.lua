@@ -12,11 +12,16 @@ require('telescope').setup {
         '~/Projects/',
       },
     },
+    bookmarks = {
+      selected_browser = 'google_chrome',
+      url_open_command = 'open',
+    }
   }
 }
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('ultisnips')
 require('telescope').load_extension('project')
+require('telescope').load_extension('bookmarks')
 
 key_mapper('n', '<leader>ff', '<cmd>Telescope find_files theme=dropdown<cr>')
 key_mapper('n', '<leader>fg', '<cmd>Telescope live_grep theme=dropdown<cr>')
@@ -27,5 +32,11 @@ vim.api.nvim_set_keymap(
     'n',
     '<C-p>',
     ":lua require'telescope'.extensions.project.project{}<CR>",
+    {noremap = true, silent = true}
+)
+vim.api.nvim_set_keymap(
+    'n',
+    '<leader>bmk',
+    ":lua require'telescope'.extensions.bookmarks.bookmarks{}<CR>",
     {noremap = true, silent = true}
 )
