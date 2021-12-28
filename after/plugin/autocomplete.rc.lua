@@ -149,7 +149,7 @@ lspconfig.tsserver.setup {
 
 lspconfig.terraformls.setup {
   on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = capabilities,
 }
 
 lspconfig.yamlls.setup {

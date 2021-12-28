@@ -36,7 +36,7 @@ require('packer').startup(function()
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'}
 
   -- Lualine
-  use 'hoob3rt/lualine.nvim'
+  use 'nvim-lualine/lualine.nvim'
   use 'kdheepak/tabline.nvim'
 
   -- webdevicons
