@@ -30,7 +30,7 @@ key_mapper('n', '<leader>fh', '<cmd>Telescope help_tags theme=dropdown<cr>')
 
 vim.api.nvim_set_keymap(
     'n',
-    '<C-p>',
+    '<leader>pjc',
     ":lua require'telescope'.extensions.project.project{}<CR>",
     {noremap = true, silent = true}
 )
