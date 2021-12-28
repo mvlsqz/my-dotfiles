@@ -43,7 +43,7 @@ require('packer').startup(function()
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      'kyazdani42/nvim-web-devicons',
     },
     config = function() require'nvim-tree'.setup {} end
   }
@@ -63,11 +63,12 @@ require('packer').startup(function()
     'nvim-telescope/telescope-fzf-native.nvim', run = 'make'
   }
 
-  -- Sessions
-  use {
-    'Shatur/neovim-session-manager',
-    requires = {
-      'nvim-telescope/telescope.nvim',
+  use { 
+    'glepnir/dashboard-nvim',
+    requires = { 
+      {'junegunn/fzf.vim'},
+      {'liuchengxu/vim-clap', run = ':Clap install-binary!'}
     }
   }
+
 end)

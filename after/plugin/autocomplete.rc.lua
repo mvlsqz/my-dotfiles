@@ -159,6 +159,7 @@ lspconfig.yamlls.setup {
     yaml = {
       schemas = {
         ["/home/marvinv/Projects/k8s-schemas/v1.22.3-local/pod.json"] = "*-pod.yaml",
+        ["/home/marvinv/Projects/k8s-schemas/v1.22.3-local/service.json"] = "*-service.yaml",
       }
     }
   }
