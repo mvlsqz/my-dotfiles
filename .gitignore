@@ -3,3 +3,4 @@ undodir/
 
 plugin/packer_compiled.lua
 tags
+.luarc.json
