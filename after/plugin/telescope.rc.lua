@@ -1,3 +1,34 @@
+--- Check if a file or directory exists in this path
+function exists(file)
+   local ok, err, code = os.rename(file, file)
+   if not ok then
+      if code == 13 then
+         -- Permission denied, but it exists
+         return true
+      end
+   end
+   return ok, err
+end
+
+--- Check if a directory exists in this path
+function isdir(path)
+   -- "/" works on both Unix and Windows
+   return exists(path.."/")
+end
+
+local project_folders = {
+  '~/Desktop/',
+  '~/Projects/',
+}
+
+results = {}
+for _, dir in pairs(project_folders) do
+  ok, err = isdir(dir)
+  if ok
+    table.insert(results, dir)
+  end
+end
+
 require('telescope').setup {
   extensions = {
     fzf = {
@@ -7,10 +38,7 @@ require('telescope').setup {
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
     },
     project = {
-      base_dirs = {
-        '~/Desktop/',
-        '~/Projects/',
-      },
+      base_dirs = results,
     },
     bookmarks = {
       selected_browser = 'google_chrome',
