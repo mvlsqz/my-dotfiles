@@ -24,7 +24,7 @@ local project_folders = {
 results = {}
 for _, dir in pairs(project_folders) do
   ok, err = isdir(dir)
-  if ok
+  if ok then
     table.insert(results, dir)
   end
 end
