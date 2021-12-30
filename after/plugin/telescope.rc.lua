@@ -40,3 +40,10 @@ vim.api.nvim_set_keymap(
     ":lua require'telescope'.extensions.bookmarks.bookmarks{}<CR>",
     {noremap = true, silent = true}
 )
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<space>bf",
+  "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>",
+  {noremap = true}
+)
