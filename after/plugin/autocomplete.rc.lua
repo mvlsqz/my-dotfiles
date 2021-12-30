@@ -222,7 +222,6 @@ lspconfig.diagnosticls.setup {
     formatters = {
       eslint_d = {
         command = 'eslint_d',
-        rootPatterns = { '.git' },
         args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
         rootPatterns = { '.git' },
       },
@@ -237,7 +236,6 @@ lspconfig.diagnosticls.setup {
       css = 'prettier',
       javascript = 'prettier',
       javascriptreact = 'prettier',
-      json = 'prettier',
       scss = 'prettier',
       less = 'prettier',
       typescript = 'prettier',
