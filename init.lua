@@ -22,10 +22,30 @@
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
-    use 'hrsh7th/nvim-cmp'
+    use {
+      'hrsh7th/nvim-cmp',
+      requires = {
+        { "hrsh7th/cmp-buffer" },
+        { "hrsh7th/cmp-nvim-lsp" },
+        { "hrsh7th/cmp-path" },
+        { "hrsh7th/cmp-nvim-lua" },
+        { "ray-x/cmp-treesitter" },
+        { "hrsh7th/nvim-cmp" },
+        { "hrsh7th/cmp-vsnip" },
+        { "hrsh7th/vim-vsnip" },
+        { "Saecki/crates.nvim" },
+        { "f3fora/cmp-spell" },
+        -- { "hrsh7th/cmp-cmdline" },
+        { "tamago324/cmp-zsh" },
+      }
+    }
+    use 'windwp/nvim-autopairs'
     use 'L3MON4D3/LuaSnip'
     use 'SirVer/ultisnips'
     use 'quangnguyen30192/cmp-nvim-ultisnips'
+    use 'onsails/lspkind-nvim'
+    use 'ray-x/lsp_signature.nvim'
+
 
     -- START UI {
       -- themes themes
@@ -36,6 +56,9 @@
       -- Lualine
       use 'nvim-lualine/lualine.nvim'
       use 'kdheepak/tabline.nvim'
+
+      -- Others
+      use 'stevearc/dressing.nvim'
     -- }
 
     -- Add indentation guides even on blank lines
