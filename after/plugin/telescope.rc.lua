@@ -1,5 +1,5 @@
 --- Check if a file or directory exists in this path
-function exists(file)
+local function exists(file)
    local ok, err, code = os.rename(file, file)
    if not ok then
       if code == 13 then
@@ -11,7 +11,7 @@ function exists(file)
 end
 
 --- Check if a directory exists in this path
-function isdir(path)
+local function isdir(path)
    -- "/" works on both Unix and Windows
    return exists(path.."/")
 end
@@ -21,9 +21,9 @@ local project_folders = {
   '~/Projects/',
 }
 
-results = {}
+local results = {}
 for _, dir in pairs(project_folders) do
-  ok, err = isdir(dir)
+  local ok = isdir(dir)
   if ok then
     table.insert(results, dir)
   end
@@ -51,10 +51,10 @@ require('telescope').load_extension('ultisnips')
 require('telescope').load_extension('project')
 require('telescope').load_extension('bookmarks')
 
-key_mapper('n', '<leader>ff', '<cmd>Telescope find_files theme=dropdown<cr>')
-key_mapper('n', '<leader>fg', '<cmd>Telescope live_grep theme=dropdown<cr>')
-key_mapper('n', '<leader>fb', '<cmd>Telescope buffers theme=dropdown<cr>')
-key_mapper('n', '<leader>fh', '<cmd>Telescope help_tags theme=dropdown<cr>')
+Key_mapper('n', '<leader>ff', '<cmd>Telescope find_files theme=dropdown<cr>')
+Key_mapper('n', '<leader>fg', '<cmd>Telescope live_grep theme=dropdown<cr>')
+Key_mapper('n', '<leader>fb', '<cmd>Telescope buffers theme=dropdown<cr>')
+Key_mapper('n', '<leader>fh', '<cmd>Telescope help_tags theme=dropdown<cr>')
 
 vim.api.nvim_set_keymap(
     'n',
