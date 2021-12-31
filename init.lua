@@ -11,8 +11,23 @@
 
   require('packer').startup(function()
     -- XXX highlight
-    use 'nvim-treesitter/nvim-treesitter'
     use 'nvim-treesitter/nvim-treesitter-textobjects'
+    -- sitting
+    use {
+      "lewis6991/spellsitter.nvim",
+      config = function()
+        require("spellsitter").setup()
+      end,
+    }
+    use {
+      "nvim-treesitter/nvim-treesitter",
+      run = ":TSUpdate",
+    }
+    use "nvim-treesitter/nvim-treesitter-refactor"
+    use "nvim-treesitter/playground"
+    use "nvim-treesitter/nvim-treesitter-textobjects"
+    use "David-Kunz/treesitter-unit"
+
     use 'sheerun/vim-polyglot'
 
     -- XXX LSP plugins
