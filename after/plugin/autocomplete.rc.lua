@@ -97,6 +97,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 -- Enable the following language servers
 local servers = {
   'ansiblels',
+  'bashls',
   'dockerls',
   'gopls',
   'pylsp',

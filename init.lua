@@ -151,6 +151,13 @@
 -- START aucmds and augroups {
   local au = require('au')
   -- Start cmds {
+    au( {'VimEnter'}, {
+        '*',
+        function ()
+          vim.fn.execute(':silent exec "!kill -s SIGWINCH $PPID"')
+        end
+      }
+    )
     -- disable numbers for terminal
     au({ 'TermOpen', 'TermEnter' }, {
         '*',
