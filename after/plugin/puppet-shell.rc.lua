@@ -17,7 +17,7 @@ local opts = {
     'gem install bundler',
     'bundle install',
     'bundle exec rake validate && bundle exec rake lint',
-    'bundle exec rubocop:auto_correct',
+    'bundle exec rake rubocop:auto_correct',
     'bundle exec rake spec_prep',
     'bundle exec rake spec_standalone',
     'bundle exec rake beaker',
