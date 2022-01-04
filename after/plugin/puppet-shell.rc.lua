@@ -29,6 +29,4 @@ local opts = {
   end,
 }
 
-local puppshell = pickers.new(dropdown, opts)
-
-puppshell:find()
+Puppshell = pickers.new(dropdown, opts)
