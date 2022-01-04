@@ -7,7 +7,7 @@ local dropdown = require'telescope.themes'.get_dropdown()
 
 local function enter(prompt_bufnr)
   local selected = actions_state.get_selected_entry()
-  local cmd = 'TermExec cmd=' .. selected[1]
+  local cmd = string.format("TermExec cmd='%s'", selected[1])
   vim.cmd(cmd)
   actions.close(prompt_bufnr)
 end
