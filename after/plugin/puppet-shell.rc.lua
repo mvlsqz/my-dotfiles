@@ -9,7 +9,6 @@ local function enter(prompt_bufnr)
   local selected = actions_state.get_selected_entry()
   local cmd = string.format("TermExec cmd='%s'", selected[1])
   vim.cmd(cmd)
-  actions.close(prompt_bufnr)
 end
 
 
@@ -26,7 +25,7 @@ local opts = {
   sorter = sorters.get_generic_fuzzy_sorter({}),
 
   attach_mappings = function(prompt_bufnr, map)
-    map('i', '<CR>', enter(prompt_bufnr))
+    map('i', '<CR>', enter)
     return true
   end,
 }
