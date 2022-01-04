@@ -26,7 +26,7 @@ local opts = {
   sorter = sorters.get_generic_fuzzy_sorter({}),
 
   attach_mappings = function(prompt_bufnr, map)
-    map('i', '<CR>', enter)
+    map('i', '<CR>', enter(prompt_bufnr))
     return true
   end,
 }
