@@ -1,13 +1,15 @@
+local actions = require'telescope.actions'
 local actions_state = require'telescope.actions.state'
 local pickers = require'telescope.pickers'
 local finders = require'telescope.finders'
 local sorters = require'telescope.sorters'
 local dropdown = require'telescope.themes'.get_dropdown()
 
-local function enter()
+local function enter(prompt_bufnr)
   local selected = actions_state.get_selected_entry()
   local cmd = 'TermExec cmd=' .. selected[1]
   vim.cmd(cmd)
+  actions.close(prompt_bufnr)
 end
 
 
