@@ -25,7 +25,6 @@
     }
     use "nvim-treesitter/nvim-treesitter-refactor"
     use "nvim-treesitter/playground"
-    use "nvim-treesitter/nvim-treesitter-textobjects"
     use "David-Kunz/treesitter-unit"
 
     use 'sheerun/vim-polyglot'
